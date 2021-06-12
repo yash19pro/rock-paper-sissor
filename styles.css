@@ -33,6 +33,7 @@ footer > h1 {
     font-size: 48px;
     padding: 20px;
     font-family: 'Asap', sans-serif;
+	bottom: 0px;
 }
 
 .score-board {

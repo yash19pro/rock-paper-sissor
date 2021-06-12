@@ -37,6 +37,8 @@ function win(userC, computerC) {
         () => document.getElementById(userC).classList.remove("green-glow"),
         300
     );
+    navigator.vibrate(1000);
+    console.log(`win vib`);
 }
 
 function lose(userC, computerC) {
@@ -51,6 +53,8 @@ function lose(userC, computerC) {
         () => document.getElementById(userC).classList.remove("red-glow"),
         300
     );
+    navigator.vibrate(1000);
+    console.log(`lose vib`);
 }
 
 function draw(userC) {
@@ -60,11 +64,12 @@ function draw(userC) {
         () => document.getElementById(userC).classList.remove("gray-glow"),
         300
     );
+    navigator.vibrate(1000);
+    console.log(`draw vib`);
 }
 
 function game(userChoice) {
     const compChoice = getComputerChoice();
-    navigator.vibrate(1000);
     switch (userChoice + compChoice) {
         case "rs":
         case "sp":
