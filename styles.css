@@ -14,7 +14,20 @@ header {
     background: white;
 }
 
+
 header > h1 {
+	color:#29272e;
+    text-align: center;
+    font-size: 48px;
+    padding: 20px;
+    font-family: 'Asap', sans-serif;
+}
+
+footer {
+	background: white;
+}
+
+footer > h1 {
     color:#29272e;
     text-align: center;
     font-size: 48px;

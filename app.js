@@ -14,43 +14,57 @@ function getComputerChoice() {
     return cho[foo];
 }
 
-function converter (foo) {
+function converter(foo) {
     switch (foo) {
         case "r":
             return "Rock";
         case "p":
             return "Paper";
         case "s":
-            return "Scissor"; 
+            return "Scissor";
     }
 }
 
-function win (userC, computerC) {
+function win(userC, computerC) {
     user++;
     userS.innerHTML = user;
     computerS.innerHTML = computer;
-    result.innerHTML = `${converter (userC)} beats ${converter (computerC)}. You Win!🔥`;
+    result.innerHTML = `${converter(userC)} beats ${converter(
+        computerC
+    )}. You Win!🔥`;
     document.getElementById(userC).classList.add("green-glow");
-    setTimeout(() => document.getElementById(userC).classList.remove("green-glow"), 300);
+    setTimeout(
+        () => document.getElementById(userC).classList.remove("green-glow"),
+        300
+    );
 }
 
-function lose (userC, computerC) {
+function lose(userC, computerC) {
     computer++;
     userS.innerHTML = user;
     computerS.innerHTML = computer;
-    result.innerHTML = `${converter (userC)} loses ${converter (computerC)}. You Lose!😞`;
+    result.innerHTML = `${converter(userC)} loses ${converter(
+        computerC
+    )}. You Lose!😞`;
     document.getElementById(userC).classList.add("red-glow");
-    setTimeout(() => document.getElementById(userC).classList.remove("red-glow"), 300);
+    setTimeout(
+        () => document.getElementById(userC).classList.remove("red-glow"),
+        300
+    );
 }
 
-function draw (userC) {
-    result.innerHTML = "Its a Draw!😩"
+function draw(userC) {
+    result.innerHTML = "Its a Draw!😩";
     document.getElementById(userC).classList.add("gray-glow");
-    setTimeout(() => document.getElementById(userC).classList.remove("gray-glow"), 300);
+    setTimeout(
+        () => document.getElementById(userC).classList.remove("gray-glow"),
+        300
+    );
 }
 
 function game(userChoice) {
     const compChoice = getComputerChoice();
+    navigator.vibrate(1000);
     switch (userChoice + compChoice) {
         case "rs":
         case "sp":
@@ -71,7 +85,6 @@ function game(userChoice) {
 }
 
 function main() {
-    
     rock.addEventListener("click", () => game("r"));
 
     paper.addEventListener("click", () => game("p"));
