@@ -37,7 +37,7 @@ function win(userC, computerC) {
         () => document.getElementById(userC).classList.remove("green-glow"),
         300
     );
-    navigator.vibrate(1000);
+    navigator.vibrate(500);
     console.log(`win vib`);
 }
 
@@ -53,7 +53,7 @@ function lose(userC, computerC) {
         () => document.getElementById(userC).classList.remove("red-glow"),
         300
     );
-    navigator.vibrate(1000);
+    navigator.vibrate(500);
     console.log(`lose vib`);
 }
 
@@ -64,7 +64,7 @@ function draw(userC) {
         () => document.getElementById(userC).classList.remove("gray-glow"),
         300
     );
-    navigator.vibrate(1000);
+    navigator.vibrate(500);
     console.log(`draw vib`);
 }
 
